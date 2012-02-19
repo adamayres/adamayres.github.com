@@ -1,9 +1,7 @@
+{% unless page.hidePageTitle == true %}
 <div class="page-header">
-  <h1>{{ page.title }} <small>Supporting tagline</small></h1>
+  <h1>{{ page.title }}{% if page.tagline %} <small>Supporting tagline</small>{% endif %}</h1>
 </div>
+{% endunless %}
 
-<div class="row">
-  <div class="span14">
-    {{ content }}
-  </div>
-</div>
+{{ content }}
